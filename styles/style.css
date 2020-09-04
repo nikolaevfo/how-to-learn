@@ -51,7 +51,8 @@
 }
 
 .header__subtitle {
-  z-index: 1;
+  /* !!!!!!!!!!!!!!!!!!! */
+  z-index: 2;
   position: absolute;
   left: 64px;
   bottom: 30px;
@@ -64,6 +65,11 @@
 .header__link {
   text-decoration: none;
   color: #2f80ed;
+}
+
+.header__link:hover {
+  text-decoration: underline;
+  color: #0000ff;
 }
 
 .header__main-illustration {
@@ -94,9 +100,8 @@
   width: 80%;
   display: flex;
   justify-content: space-between;
-  /*TODO нужна ли вообще минимальная высота??? */
-  min-height: 300px;
 }
+
 .two-columns__brief {
   margin: 0;
   width: 175px;
@@ -105,10 +110,12 @@
   font-weight: normal;
   color: #2f80ed;
 }
+
 .two-columns__main-text {
   width: 80%;
   min-width: 784px;
 }
+
 .two-columns__paragraph {
   margin: 0;
   margin-bottom: 30px;
@@ -116,9 +123,11 @@
   font-size: 24px;
   font-weight: normal;
 }
+
 .two-columns__paragraph:last-child {
   margin-bottom: 0;
 }
+
 .two-columns__span-accent {
   line-height: 34px;
   font-size: 24px;
@@ -129,6 +138,7 @@
 .digits {
   padding: 100px 0;
 }
+
 .section-title {
   width: 60%;
   margin: 0 auto 20px;
@@ -136,7 +146,11 @@
   line-height: 1.15;
   font-size: 60px;
   font-weight: bold;
+  /* для темной темы и на будущее */
+  position: relative;
+  z-index: 1;
 }
+
 .section-subtitle {
   width: 60%;
   margin: 0 auto;
@@ -144,46 +158,59 @@
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
+  /* для темной темы и на будущее */
+  position: relative;
+  z-index: 1;
 }
+
 .table {
+  padding: 0;
   width: 1100px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  list-style-type: none;
 }
+
 .table__cell {
+  margin: 0;
+  padding: 0;
   width: 250px;
   margin-top: 60px;
-}
-.table__cell:nth-last-child(-n + 4) {
-  margin-bottom: 0;
+  /* для темной темы и на будущее */
+  position: relative;
+  z-index: 1;
 }
 
 .table__heading {
-  margin-bottom: 20px;
+  /* !!!!!!!!!!!!!!!!!!! */
+  margin: 0;
+  padding: 0;
   line-height: 1.15;
   font-size: 24px;
   font-weight: bold;
 }
+
 .table__text {
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
 }
-
-.table__text:last-child {
-  margin-top: 20px;
-}
-
+/* !!!!!!!!!!!!!!!!!!!!!!! */
 /* feinman================================================== */
 
 .feynman {
   background: #f2f2f2 url("../images/feynman.png") bottom left/867px 637px no-repeat;
   position: relative;
-  height: 790px;
+  /* ++++++++++++++++++++++++++++ */
+  min-height: 790px;
   padding-top: 100px;
 }
+
 .feynman__title {
   margin: 0px auto;
   width: 648px;
@@ -192,6 +219,7 @@
   font-size: 120px;
   font-weight: bold;
 }
+
 .feynman__subtitle {
   margin: 0;
   margin-top: 70px;
@@ -200,7 +228,8 @@
   font-size: 36px;
   font-weight: normal;
 }
-.link {
+
+.feynman__link {
   position: absolute;
   top: 50%;
   right: 48px;
@@ -220,32 +249,18 @@
 }
 
 .section-title_theme_dark {
-  width: 60%;
-  margin-bottom: 20px;
   color: white;
-  line-height: 69px;
-  font-size: 60px;
-  font-weight: bold;
+  /* zindex перенс в .section-title, на случай если и там будет фоном картинка*/
 }
 
 .section-subtitle_theme_dark {
-  width: 60%;
   color: white;
-  line-height: 34px;
-  font-size: 24px;
-  font-weight: normal;
-}
-
-.table_theme_dark {
-  margin: 0 auto;
 }
 
 .table__cell_theme_dark {
   width: 200px;
   color: white;
-  margin-right: 0;
   margin-top: 80px;
-  z-index: 1;
 }
 
 .table__heading_theme_dark {
@@ -261,6 +276,7 @@
 }
 
 .kaufman__triangle {
+  background: url("../images/kaufman-triangle.svg") 0 0 / contain no-repeat;
   width: 877px;
   height: 877px;
   position: absolute;
@@ -289,7 +305,8 @@
   flex-direction: column;
   justify-content: space-between;
   flex-basis: 711px;
-  height: 250px;
+  /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+  min-height: 250px;
 }
 
 .logo_place_footer {
@@ -298,6 +315,7 @@
   background: url("../images/logo_place_footer.svg") 0 0 / contain no-repeat;
 }
 .footer__author {
+  margin: 0;
   color: white;
   padding: 18px 0;
   line-height: 25px;
@@ -306,6 +324,8 @@
 }
 
 .footer__column-heading {
+  padding: 0;
+  margin: 0;
   margin-bottom: 20px;
   color: white;
   line-height: 30px;
@@ -314,20 +334,28 @@
 }
 
 .footer__column-links {
+  padding: 0;
+  margin: 0;
   padding-bottom: 16px;
+  list-style-type: none;
 }
 
-/* классы, не прописанные в брифе */
-.footer__img-logo {
+.footer__social-icon {
   margin-right: 10px;
   width: 16px;
   height: 16px;
 }
 
+/* классы, не прописанные в брифе */
 .footer__column-link {
   color: white;
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
   text-decoration: none;
+}
+
+.footer__column-link:hover {
+  text-decoration: underline;
+  color: #c0c0c0;
 }
