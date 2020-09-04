@@ -63,6 +63,7 @@
 
 .header__link {
   text-decoration: none;
+  color: #2f80ed;
 }
 
 .header__main-illustration {
@@ -280,6 +281,7 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  height: 100%;
 }
 
 .footer__column_content_copyright {
@@ -315,10 +317,7 @@
   padding-bottom: 16px;
 }
 
-.footer__column_content_social {
-}
-
-/* классы моего добавления */
+/* классы, не прописанные в брифе */
 .footer__img-logo {
   margin-right: 10px;
   width: 16px;
