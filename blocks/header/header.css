@@ -1,0 +1,15 @@
+.header {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  min-height: 600px;
+  max-height: 756px;
+  /* выше установили ограничения для секции */
+  position: relative;
+  background-color: #f2f2f2;
+  /* Добавлено свойство hidden, для мониторов высотой 768px (как у меня) */
+  /* так как синий квадрат может начать выступать снизу основной картинки*/
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}

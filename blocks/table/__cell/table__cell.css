@@ -1,0 +1,8 @@
+.table__cell {
+  margin: 60px 0 0;
+  padding: 0;
+  width: 250px;
+  /* для темной темы и на будущее */
+  position: relative;
+  z-index: 1;
+}
