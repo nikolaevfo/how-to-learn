@@ -4,7 +4,7 @@
 ## Сайт о *правильном* подходе к обучению.
 
 ### Данный сайт является первой работой, созданной мной, в процессе обучения в [Яндекс Практикум](https://praktikum.yandex.ru/ "Я Яндекс Практикум").
-https://nikolaevfo.github.io/how-to-learn/
+
 ### Ссылка на GH Pages: [Как учиться](https://nikolaevfo.github.io/how-to-learn/index.html).
 
 #### В процессе работы использованы: 
